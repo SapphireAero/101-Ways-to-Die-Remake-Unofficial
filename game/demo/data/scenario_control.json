@@ -1,0 +1,11 @@
+{
+  "DEMO_NOTE.FOB": [
+    {
+      "id": "DEMO_NOTE.FOB:0x1:control:0",
+      "offset": "0x1",
+      "type": "control",
+      "command": "WaitTime",
+      "ticks": 1
+    }
+  ]
+}

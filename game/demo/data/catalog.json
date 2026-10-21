@@ -1,0 +1,36 @@
+{
+  "prologue": "DEMO_INTRO.FOB",
+  "cg": [
+    [
+      "DEMO_BLUE",
+      "demo/cg/blue.svg",
+      "Authored geometric demo"
+    ],
+    [
+      "DEMO_AMBER",
+      "demo/cg/amber.svg",
+      "Authored geometric demo"
+    ]
+  ],
+  "scenes": [
+    {
+      "scenario": "DEMO_A.FOB",
+      "title": "蓝色路线"
+    },
+    {
+      "scenario": "DEMO_B.FOB",
+      "title": "琥珀路线"
+    }
+  ],
+  "endings": [
+    {
+      "scenario": "DEMO_END.FOB",
+      "title": "演示终点"
+    }
+  ],
+  "auxiliary_limits": {
+    "DEMO_NOTE.FOB": 2
+  },
+  "bgm": {},
+  "se": {}
+}

@@ -1,0 +1,95 @@
+{
+  "DEMO_INTRO.FOB": [
+    {
+      "id": "DEMO_INTRO.FOB:0x10:text:0",
+      "offset": "0x10",
+      "type": "text",
+      "text": "公開ソースのデモへようこそ。これは機能を紹介するための新しい文章です。"
+    },
+    {
+      "id": "DEMO_INTRO.FOB:0x20:text:0",
+      "offset": "0x20",
+      "type": "text",
+      "text": "設定から言語を変更できます。表示中の文章と履歴も更新されます。ここでセーブもできます。"
+    }
+  ],
+  "DEMO_CHOICE.FOB": [
+    {
+      "id": "DEMO_CHOICE.FOB:0x10:text:0",
+      "offset": "0x10",
+      "type": "text",
+      "text": "次の選択はルート処理のデモです。別々の図形を表示した後、同じ終点へ進みます。"
+    },
+    {
+      "id": "DEMO_CHOICE.FOB:0x20:choice:0",
+      "offset": "0x20",
+      "type": "choice",
+      "options": [
+        "青いルート",
+        "琥珀のルート"
+      ]
+    }
+  ],
+  "DEMO_A.FOB": [
+    {
+      "id": "DEMO_A.FOB:0x10:text:0",
+      "offset": "0x10",
+      "type": "text",
+      "text": "青いルートを選びました。"
+    },
+    {
+      "id": "DEMO_A.FOB:0x20:text:0",
+      "offset": "0x20",
+      "type": "text",
+      "text": "二つのテキストイベントを一つの段落として表示します。"
+    },
+    {
+      "id": "DEMO_A.FOB:0x30:call:0",
+      "offset": "0x30",
+      "type": "call",
+      "scenario": "DEMO_NOTE.FOB"
+    },
+    {
+      "id": "DEMO_A.FOB:0x40:text:0",
+      "offset": "0x40",
+      "type": "text",
+      "text": "子シナリオから戻りました。青いルートを続けます。見た画像はギャラリーに登録されます。"
+    }
+  ],
+  "DEMO_B.FOB": [
+    {
+      "id": "DEMO_B.FOB:0x10:text:0",
+      "offset": "0x10",
+      "type": "text",
+      "text": "琥珀のルートを選びました。画像の記録は青いルートと別になっています。"
+    },
+    {
+      "id": "DEMO_B.FOB:0x20:call:0",
+      "offset": "0x20",
+      "type": "call",
+      "scenario": "DEMO_NOTE.FOB"
+    },
+    {
+      "id": "DEMO_B.FOB:0x30:text:0",
+      "offset": "0x30",
+      "type": "text",
+      "text": "子シナリオから戻りました。履歴、ロールバック、セーブとロードを試せます。"
+    }
+  ],
+  "DEMO_NOTE.FOB": [
+    {
+      "id": "DEMO_NOTE.FOB:0x10:text:0",
+      "offset": "0x10",
+      "type": "text",
+      "text": "これは共通の子シナリオです。親シナリオの位置を保存してから、元のルートへ戻ります。"
+    }
+  ],
+  "DEMO_END.FOB": [
+    {
+      "id": "DEMO_END.FOB:0x10:text:0",
+      "offset": "0x10",
+      "type": "text",
+      "text": "ここでルートが合流します。タイトルのギャラリーで画像とシーンを確認できます。"
+    }
+  ]
+}

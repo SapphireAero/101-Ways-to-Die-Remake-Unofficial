@@ -1,0 +1,20 @@
+{
+  "DEMO_A.FOB": [
+    {
+      "id": "DEMO_A.FOB:0x5:background:0",
+      "offset": "0x5",
+      "type": "background",
+      "image": "demo/cg/blue.svg",
+      "transition": true
+    }
+  ],
+  "DEMO_B.FOB": [
+    {
+      "id": "DEMO_B.FOB:0x5:background:0",
+      "offset": "0x5",
+      "type": "background",
+      "image": "demo/cg/amber.svg",
+      "transition": true
+    }
+  ]
+}

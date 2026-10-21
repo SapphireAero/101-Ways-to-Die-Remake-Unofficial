@@ -1,0 +1,44 @@
+{
+  "scenario_calls": [
+    {
+      "offset": 10,
+      "scenario": "DEMO_CHOICE.FOB"
+    },
+    {
+      "offset": 20,
+      "scenario": "DEMO_A.FOB"
+    },
+    {
+      "offset": 30,
+      "scenario": "DEMO_B.FOB"
+    },
+    {
+      "offset": 40,
+      "scenario": "DEMO_END.FOB"
+    }
+  ],
+  "conditions": [
+    {
+      "source_call_offset": "0xa",
+      "option_count": 2,
+      "branch_group": {
+        "metadata_end": "0x28"
+      },
+      "branches": [
+        {
+          "range": [
+            "0x14",
+            "0x1e"
+          ]
+        },
+        {
+          "range": [
+            "0x1e",
+            "0x28"
+          ]
+        }
+      ]
+    }
+  ],
+  "root_end": 50
+}
