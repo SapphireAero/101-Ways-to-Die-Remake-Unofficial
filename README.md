@@ -2,10 +2,10 @@
 
 基于 Ren’Py 8.5.0 的数据驱动叙事运行时。JSON 描述场景事件、条件分支、文本段落与媒体控制，Ren’Py 脚本负责调度事件并接入原生对话、历史、存读档和回退机制。
 
-##作者的话
+## 作者的话
 去年年底偶然在硬盘里寻觅到这个游戏，无愧为三大毒电波。
 基于renpy8.5.0进行了重置，算是一次学习，把游戏进行了重置，没有开源素材但是开源了代码。
-release提供Windows，Android，IOS的完整重置版本
+release提供PC（Windows/Linux），Mac，Android，IOS的完整重置版本
 
 ## 运行环境与目录
 
@@ -27,9 +27,7 @@ game/
   demo/data/                       JSON 数据与翻译表
   demo/cg/                         几何占位图
   gui/ / tl/                       通用界面资源与界面翻译
-tools/                             对话生成、文件清单与导出工具
 LICENSES/                          第三方许可证
-public-manifest.json               公开文件清单
 ```
 
 ## 执行模型
@@ -211,11 +209,7 @@ label original_line_标识:
     return
 ```
 
-修改事件、段落分组或线性文本后，在项目根目录运行以下命令，并提交更新后的 `game/demo_dialogue_lines.rpy`：
-
-```text
-python tools/generate_dialogue.py
-```
+修改事件、段落分组或线性文本后，需要同步维护 `game/demo_dialogue_lines.rpy`。每个显示段落都应具有按上述规则命名的独立标签；已有段落保持原标识，新增段落添加对应标签，合并或拆分段落时同步调整映射。
 
 标签为 Ren’Py 的已读记录提供稳定语句位置；文本值在显示时解析。对话框高度则通过字符宽度和行数估算，在默认文本框高度与屏幕可用高度之间调整。
 
@@ -253,15 +247,9 @@ python tools/generate_dialogue.py
 
 呈现指令由 `original_presentation_execute()` 处理：`WaitTime` 将 `ticks` 按 60 Hz 转为秒，`WaitKey` 等待输入，`TextOn` 恢复自动文本窗口，窗口开关指令控制显示与转场。恢复状态时跳过等待。视频入口在 `renpy.loadable(path)` 为真时调用 `renpy.movie_cutscene(path)`。
 
-## 文件边界与扩展
+## 资源与扩展
 
-`public-manifest.json` 明确列出可公开文件。`tools/check_public.py` 检查清单与文件范围，`tools/export_public.py` 将清单内容复制到项目外的新目录：
-
-```text
-python tools/export_public.py --output ../101-remake-public-export
-```
-
-新增内容需要同步更新资源目录表、事件数据、对话标签和公开文件清单。当前规则排除原作数据目录、音视频、游戏归档与可执行文件；扩展这些类型时也需调整文件规则与许可说明。
+新增内容需要同步更新资源目录表、事件数据和对话标签。`.gitignore` 排除运行缓存、存档、原作数据目录、音视频及发行文件；调整公开的资源类型时，应同步维护忽略规则和许可说明。
 
 仓库只提供通用界面资源、字体、演示文本和几何图形，不含原作剧情及视听素材。完整工程接入需自行适配数据入口、资源映射、剧情规则与菜单。
 
